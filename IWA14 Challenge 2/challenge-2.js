@@ -1,10 +1,15 @@
-const add = function (a, b, c) {
+const add = function (a, b) {
+  return a + b;
+};
+
+const multiply = function (a, b, c) {
   return (a + b) * c;
 };
 
 const internal = function () {
-  total = this.add(this.internal.a, this.internal.b, this.internal.c);
-  console.log(total);
+  added = this.add(this.internal.a, this.internal.b);
+  multiplied = multiply(this.internal.a, this.internal.b, this.internal.c);
+  console.log(multiplied);
 };
 
 // Not allowed to change below this
